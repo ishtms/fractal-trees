@@ -1,6 +1,6 @@
 var slider;
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight)
+    createCanvas(800, 800)
     deg = PI / 4
     slider = createSlider(0, TWO_PI, PI / 4, 0.01)
 }
@@ -16,7 +16,7 @@ function draw() {
 var createFractal = function(_length) {
     line(0, 0, 0, -_length);
     translate(0, -_length);
-    if(_length > 2) {
+    if(_length > 4) {
         push();
         rotate(slider.value());
         createFractal(_length * 0.7)
